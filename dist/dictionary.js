@@ -1,0 +1,61 @@
+/* Small, local starter dictionary. Sentence translation uses the configurable
+   MyMemory API in app.js. Add your own vocabulary here, or in the Vocabulary tool. */
+const CHINESE_DICTIONARY = [
+  ['你好','nǐ hǎo','hello','привет'],['您好','nín hǎo','hello (polite)','здравствуйте'],
+  ['再见','zài jiàn','goodbye','до свидания'],['谢谢','xiè xie','thank you','спасибо'],
+  ['不客气','bú kè qi','you are welcome','пожалуйста'],['对不起','duì bu qǐ','sorry','извините'],
+  ['没关系','méi guān xi','it is okay','ничего страшного'],['早上好','zǎo shang hǎo','good morning','доброе утро'],
+  ['晚上好','wǎn shang hǎo','good evening','добрый вечер'],['晚安','wǎn ān','good night','спокойной ночи'],
+  ['我','wǒ','I','я'],['你','nǐ','you','ты'],['他','tā','he','он'],['她','tā','she','она'],
+  ['我们','wǒ men','we','мы'],['你们','nǐ men','you (plural)','вы'],['他们','tā men','they','они'],
+  ['是','shì','to be','быть'],['不是','bú shì','is not','не является'],['有','yǒu','to have','иметь'],
+  ['没有','méi yǒu','do not have','не иметь'],['不','bù','not','не'],['的','de','possessive particle','притяжательная частица'],
+  ['吗','ma','question particle','вопросительная частица'],['呢','ne','and you?','а ты?'],
+  ['好','hǎo','good','хорошо'],['很好','hěn hǎo','very good','очень хорошо'],['很','hěn','very','очень'],
+  ['叫','jiào','to be called','называться'],['名字','míng zi','name','имя'],['什么','shén me','what','что'],
+  ['谁','shéi','who','кто'],['哪里','nǎ lǐ','where','где'],['为什么','wèi shén me','why','почему'],
+  ['怎么','zěn me','how','как'],['多少','duō shao','how many','сколько'],
+  ['中国','Zhōng guó','China','Китай'],['中文','Zhōng wén','Chinese','китайский язык'],
+  ['汉语','Hàn yǔ','Chinese language','китайский язык'],['英语','Yīng yǔ','English','английский язык'],
+  ['俄语','É yǔ','Russian','русский язык'],['加拿大','Jiā ná dà','Canada','Канада'],
+  ['哈萨克斯坦','Hā sà kè sī tǎn','Kazakhstan','Казахстан'],['多伦多','Duō lún duō','Toronto','Торонто'],
+  ['老师','lǎo shī','teacher','учитель'],['学生','xué sheng','student','студент'],['朋友','péng you','friend','друг'],
+  ['同学','tóng xué','classmate','одноклассник'],['人','rén','person','человек'],['家','jiā','home','дом'],
+  ['爸爸','bà ba','dad','папа'],['妈妈','mā ma','mom','мама'],['哥哥','gē ge','older brother','старший брат'],
+  ['姐姐','jiě jie','older sister','старшая сестра'],['弟弟','dì di','younger brother','младший брат'],
+  ['妹妹','mèi mei','younger sister','младшая сестра'],['孩子','hái zi','child','ребёнок'],
+  ['一','yī','one','один'],['二','èr','two','два'],['三','sān','three','три'],['四','sì','four','четыре'],
+  ['五','wǔ','five','пять'],['六','liù','six','шесть'],['七','qī','seven','семь'],['八','bā','eight','восемь'],
+  ['九','jiǔ','nine','девять'],['十','shí','ten','десять'],['零','líng','zero','ноль'],
+  ['今天','jīn tiān','today','сегодня'],['明天','míng tiān','tomorrow','завтра'],['昨天','zuó tiān','yesterday','вчера'],
+  ['现在','xiàn zài','now','сейчас'],['时间','shí jiān','time','время'],['年','nián','year','год'],
+  ['月','yuè','month','месяц'],['日','rì','day','день'],['星期','xīng qī','week','неделя'],
+  ['水','shuǐ','water','вода'],['茶','chá','tea','чай'],['咖啡','kā fēi','coffee','кофе'],
+  ['牛奶','niú nǎi','milk','молоко'],['米饭','mǐ fàn','rice','рис'],['面条','miàn tiáo','noodles','лапша'],
+  ['饺子','jiǎo zi','dumplings','пельмени'],['苹果','píng guǒ','apple','яблоко'],['水果','shuǐ guǒ','fruit','фрукты'],
+  ['吃','chī','to eat','есть'],['喝','hē','to drink','пить'],['喜欢','xǐ huan','to like','нравиться'],
+  ['爱','ài','to love','любить'],['想','xiǎng','to want','хотеть'],['要','yào','to want (need)','хотеть'],
+  ['学习','xué xí','to study','учиться'],['说','shuō','to speak','говорить'],['听','tīng','to listen','слушать'],
+  ['看','kàn','to look','смотреть'],['读','dú','to read','читать'],['写','xiě','to write','писать'],
+  ['去','qù','to go','идти'],['来','lái','to come','приходить'],['工作','gōng zuò','work','работа'],
+  ['学校','xué xiào','school','школа'],['书','shū','book','книга'],['电脑','diàn nǎo','computer','компьютер'],
+  ['手机','shǒu jī','phone','телефон'],['猫','māo','cat','кошка'],['狗','gǒu','dog','собака'],
+  ['大','dà','big','большой'],['小','xiǎo','small','маленький'],['多','duō','many','много'],['少','shǎo','few','мало'],
+  ['漂亮','piào liang','beautiful','красивый'],['高兴','gāo xìng','happy','радостный'],
+  ['你好吗','nǐ hǎo ma','how are you','как дела'],['我很好','wǒ hěn hǎo','I am very well','у меня всё хорошо'],
+  ['你叫什么名字','nǐ jiào shén me míng zi','what is your name','как тебя зовут'],
+  ['很高兴认识你','hěn gāo xìng rèn shi nǐ','nice to meet you','приятно познакомиться'],
+  ['我喜欢学习中文','wǒ xǐ huan xué xí Zhōng wén','I like studying Chinese','мне нравится учить китайский'],
+  ['我是学生','wǒ shì xué sheng','I am a student','я студент'],
+  ['我来自哈萨克斯坦','wǒ lái zì Hā sà kè sī tǎn','I am from Kazakhstan','я из Казахстана']
+];
+const CHINESE_CONFIG = {
+  translationEndpoint: 'https://api.mymemory.translated.net/get',
+  /* Place your MP3s in assets/audio/, then refer to them by this key in an Audio exercise. */
+  audioPaths: {
+    greetings: 'assets/audio/greetings.mp3',
+    numbers: 'assets/audio/numbers.mp3',
+    family: 'assets/audio/family.mp3',
+    food: 'assets/audio/food.mp3'
+  }
+};
